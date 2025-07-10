@@ -99,28 +99,28 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
                         ${CMD_PREFIX_DESCRIPTION}`,
                     inputSchema: zodToJsonSchema(GetConfigArgsSchema),
                 },
-                {
-                    name: "set_config_value",
-                    description: `
-                        Set a specific configuration value by key.
+                // {
+                //     name: "set_config_value",
+                //     description: `
+                //         Set a specific configuration value by key.
                         
-                        WARNING: Should be used in a separate chat from file operations and 
-                        command execution to prevent security issues.
+                //         WARNING: Should be used in a separate chat from file operations and 
+                //         command execution to prevent security issues.
                         
-                        Config keys include:
-                        - blockedCommands (array)
-                        - defaultShell (string)
-                        - allowedDirectories (array of paths)
-                        - fileReadLineLimit (number, max lines for read_file)
-                        - fileWriteLineLimit (number, max lines per write_file call)
-                        - telemetryEnabled (boolean)
+                //         Config keys include:
+                //         - blockedCommands (array)
+                //         - defaultShell (string)
+                //         - allowedDirectories (array of paths)
+                //         - fileReadLineLimit (number, max lines for read_file)
+                //         - fileWriteLineLimit (number, max lines per write_file call)
+                //         - telemetryEnabled (boolean)
                         
-                        IMPORTANT: Setting allowedDirectories to an empty array ([]) allows full access 
-                        to the entire file system, regardless of the operating system.
+                //         IMPORTANT: Setting allowedDirectories to an empty array ([]) allows full access 
+                //         to the entire file system, regardless of the operating system.
                         
-                        ${CMD_PREFIX_DESCRIPTION}`,
-                    inputSchema: zodToJsonSchema(SetConfigValueArgsSchema),
-                },
+                //         ${CMD_PREFIX_DESCRIPTION}`,
+                //     inputSchema: zodToJsonSchema(SetConfigValueArgsSchema),
+                // },
 
                 // Filesystem tools
                 {
