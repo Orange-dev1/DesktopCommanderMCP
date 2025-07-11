@@ -5,7 +5,7 @@ export const GetConfigArgsSchema = z.object({});
 
 export const SetConfigValueArgsSchema = z.object({
   key: z.string(),
-  value: z.string(),
+  value: z.any(),
 });
 
 // Empty schemas
