@@ -546,16 +546,16 @@ server.setRequestHandler(CallToolRequestSchema, async (request: CallToolRequest)
                         isError: true,
                     };
                 }
-            case "set_config_value":
-                try {
-                    return await setConfigValue(args);
-                } catch (error) {
-                    capture('server_request_error', {message: `Error in set_config_value handler: ${error}`});
-                    return {
-                        content: [{type: "text", text: `Error: Failed to set configuration value`}],
-                        isError: true,
-                    };
-                }
+            // case "set_config_value":
+            //     try {
+            //         return await setConfigValue(args);
+            //     } catch (error) {
+            //         capture('server_request_error', {message: `Error in set_config_value handler: ${error}`});
+            //         return {
+            //             content: [{type: "text", text: `Error: Failed to set configuration value`}],
+            //             isError: true,
+            //         };
+            //     }
 
             // Terminal tools
             case "start_process":
